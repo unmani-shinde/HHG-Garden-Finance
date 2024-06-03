@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '.vscode/**'
+      - '.idea/**'
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  ALGOTrust-contracts-validate:
+    name: Run ALGOTrust-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/ALGOTrust-contracts-ci.yaml
+
+  ALGOTrust-contracts-release:
+    name: Run ALGOTrust-contracts release
+    secrets: inherit
+    uses: ./.github/workflows/ALGOTrust-contracts-cd.yaml
+    needs: ALGOTrust-contracts-validate
+
+  ALGOTrust-frontend-validate:
+    name: Run ALGOTrust-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/ALGOTrust-frontend-ci.yaml
+
+  ALGOTrust-frontend-release:
+    name: Run ALGOTrust-frontend release
+    secrets: inherit
+    uses: ./.github/workflows/ALGOTrust-frontend-cd.yaml
+    needs: ALGOTrust-frontend-validate
