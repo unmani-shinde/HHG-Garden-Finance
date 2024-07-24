@@ -1,0 +1,30 @@
+
+*{
+  font-family: 'Poppins',sans-serif;
+}
+
+
+/*Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.layout-header {
+  position: relative;
+  width: 100%;
+  /* Additional styles like background color or padding */
+}
+
+.layout-main {
+  flex: 1; /* Fills the remaining space */
+  padding: 20px; /* Optional padding */
+}
+
+.layout-footer {
+  position: relative;
+  width: 100%;
+  background-color: #f8f9fa; /* Optional styling for footer */
+  /* Add other footer styles if needed */
+}
