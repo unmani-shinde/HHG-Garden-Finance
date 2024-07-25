@@ -6,5 +6,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [flowbite.plugin(),require('flowbite/plugin')],
+  plugins: [flowbite.plugin(),require('flowbite/plugin'),require('@tailwindcss/forms'),],
 };
