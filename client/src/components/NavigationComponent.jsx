@@ -6,10 +6,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { DarkThemeToggle } from 'flowbite-react'
 
 const navigation = [
-  { name: 'Product', href: '/choose-chain' },
-  { name: 'Features', href: '/mint-token' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Tokenize Estate', href: '/tokenize' },
+  { name: 'My Tokens', href: '/my-tokens' },
+  { name: 'Marketplace', href: '/marketplace' },
+  { name: 'Get My BTC', href: '/get-btc' },
 ]
 
 export default function NavigationComponent() {

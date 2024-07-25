@@ -5,7 +5,7 @@ import { ERC20ABI } from "./erc20";
 import React from "react";
 
 const Balances: React.FC = () => {
-  const { bitcoin } = useGarden();
+  const { bitcoin} = useGarden();
   const { evmProvider } = useMetaMaskStore();
   const [bitcoinBalance, setBitcoinBalance] = useState("0");
   const [wbtcBalance, setWBTCBalance] = useState("0");
@@ -31,7 +31,13 @@ const Balances: React.FC = () => {
       );
       const signer = await evmProvider.getSigner();
       const address = await signer.getAddress();
+      console.log("hello");
+      
+      console.log("address",address);
+      
       const wbtcBalance = await erc20.balanceOf(address);
+      console.log("balance:",wbtcBalance);
+      
       setWBTCBalance(Number(formatUnits(wbtcBalance, 8)).toFixed(6));
     } catch (err) {
       setIsSigned(false);

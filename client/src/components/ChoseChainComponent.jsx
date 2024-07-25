@@ -5,7 +5,7 @@ import { ConnectKitButton } from "connectkit";
 import { useSwitchChain } from "wagmi";
 
 export const CHAIN_IDS = [
-    { chainID: 11155111, chainName: 'Bitcoin/EVM Combination',currency:'wBTC',explorer:'https://sepolia.etherscan.io/address' },
+    { chainID: 11155111, chainName: 'Bitcoin/Ethereum Sepolia',currency:'wBTC',explorer:'https://sepolia.etherscan.io/address' },
     { chainID: 1115, chainName: 'Core DAO Testnet',currency:'tCoRE',explorer:'https://scan.test.btcs.network/address' }
 ];
 
