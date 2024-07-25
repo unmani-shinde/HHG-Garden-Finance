@@ -6,11 +6,12 @@ import { getDefaultConfig } from "connectkit";
 
 export const config = createConfig(
   getDefaultConfig({
-    chains: [core,sepolia],
+    chains: [sepolia,core],
     transports: {
+      [sepolia.id]:http(),
       [core.id]: http(),
-      [sepolia.id]:http()
     },
+    
     walletConnectProjectId: 'a9fdc841635ffa2c5fe7d18174a050b7',
     // Required App Info
     appName: "ShareBlock",
